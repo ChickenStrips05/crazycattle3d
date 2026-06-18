@@ -119,6 +119,7 @@
 	<script src="coi-serviceworker.min.js"></script>
 	<script src="index.js"></script>
 	<script>
+		// CHANGED "ensureCrossOriginIsolationHeaders": true
 		const GODOT_CONFIG = { "args": [], "canvasResizePolicy": 2, "ensureCrossOriginIsolationHeaders": false, "executable": "index", "experimentalVK": false, "fileSizes": { "index.pck": 39414368, "index.wasm": 1650612 }, "focusCanvas": true, "gdextensionLibs": [] };
 		const GODOT_THREADS_ENABLED = true;
 		const engine = new Engine(GODOT_CONFIG);
@@ -174,7 +175,8 @@
 				threads: GODOT_THREADS_ENABLED,
 			});
 
-			if (missing.length !== 0) {
+			// REMOVED missing.length !== 0
+			if (true) {
 				// REMOVED && GODOT_CONFIG['ensureCrossOriginIsolationHeaders'] 
 				if (GODOT_CONFIG['serviceWorker'] && 'serviceWorker' in navigator) {
 					let serviceWorkerRegistrationPromise;
