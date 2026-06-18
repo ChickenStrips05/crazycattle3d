@@ -177,8 +177,8 @@
 
 			// REMOVED missing.length !== 0
 			if (true) {
-				// REMOVED && GODOT_CONFIG['ensureCrossOriginIsolationHeaders'] 
-				if (GODOT_CONFIG['serviceWorker'] && 'serviceWorker' in navigator) {
+				// REMOVED GODOT_CONFIG['serviceWorker'] && 'serviceWorker' in navigator && GODOT_CONFIG['ensureCrossOriginIsolationHeaders'] 
+				if (true) {
 					let serviceWorkerRegistrationPromise;
 					try {
 						serviceWorkerRegistrationPromise = navigator.serviceWorker.getRegistration();
